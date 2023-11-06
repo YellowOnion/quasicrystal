@@ -32,10 +32,6 @@ local function make_noise_func(x, y, i, scale, amount)
         sum = sum + noise.cos(noise.cos(theta + math.pi * j / sym)*x + noise.sin(theta + math.pi * j / sym)*y)
     end
     sum = sum / sym
-    local cth = noise.cos(theta)
-    local sth = noise.sin(theta)
-    local cth2 = noise.cos(theta + math.pi * 0.5)
-    local sth2 = noise.sin(theta + math.pi * 0.5)
     return  sum / 2 + 0.5
 end
 
